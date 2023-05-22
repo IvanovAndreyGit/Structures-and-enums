@@ -79,11 +79,6 @@ int main()
         }
     } while (n);
     
-    //else
-    //{ 
-    //    std::cout << "До свидания" << std::endl;
-    //}
- 
     return 0;
 
 }
