@@ -7,10 +7,12 @@ struct account
     float balance;
 };
 
-void account_update(int &id, float &new_balance)
+void account_update(struct account* user)
 {
-    account p;
-    p.balance = new_balance;
+    float temp;
+    std::cout << "Введите новый баланс: ";
+    std::cin >> temp;
+    user->balance = temp;
 }
 
 int main()
@@ -23,10 +25,8 @@ int main()
     std::cin >> person.name;
     std::cout << "Введите баланс: ";
     std::cin >> person.balance;
-    std::cout << "Введите новый баланс: ";
-    std::cin >> person.balance;
     
-    account_update(person.id, person.balance);
+    account_update(&person);
     
     std::cout << "Ваш счёт: " << person.name << ", " << person.id << ", " << person.balance << std::endl;
 

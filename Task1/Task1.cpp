@@ -23,11 +23,11 @@ int main()
     setlocale(LC_ALL, "Russian");
     int n;
 
-  
     do
     {
         std::cout << "Введите номер месяца: ";
         std::cin >> n;
+        static_cast<enum months>(n);
         if (0 <= n && n < 13)
         {
             switch (n)
